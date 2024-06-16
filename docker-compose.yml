@@ -1,0 +1,31 @@
+# This is the version of the docker-compose file we are using.
+# It ensures that the file is compatible with the docker-compose CLI.
+version: '3.8'
+
+# This section defines the services that will be run as part of this docker-compose setup.
+# Each service is defined with a name, image, ports, environment variables, and networks.
+services:
+  # This service runs a PostgreSQL database.
+  # It is named 'dev-db'.
+  dev-db:
+    # The image is the PostgreSQL version 14 Docker image.
+    image: postgres:14
+    # The container's port 5432 is mapped to the host's port 5432.
+    ports:
+      - 5432:5432
+    # The environment variables are used to configure the PostgreSQL database.
+    environment:
+      # The username for the database is 'postgres'.
+      POSTGRES_USER: postgres
+      # The password for the database is '123'.
+      POSTGRES_PASSWORD: 123
+      # The name of the database is 'divic'.
+      POSTGRES_DB: divic
+    # The 'divic' network is used to connect the container to other services.
+    networks:
+      - divic
+
+# This section defines the networks that will be used by the services.
+# The 'divic' network is used by the 'dev-db' service.
+networks:
+  divic:
