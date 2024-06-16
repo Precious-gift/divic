@@ -217,7 +217,7 @@ npm run test
 
 Download the Postman collection to test the API endpoints.
 
-- [Download Postman Collection](./div/Divic.postman_collection.json)
+- [Download Postman Collection]("./div/Divic.postman_collection.json")
 
 ## Conclusion
 
