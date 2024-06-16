@@ -169,7 +169,7 @@ input LoginUserInput {
 
 Mutations
 
-User Registration
+## User Registration
 Registers a new user with an email, password, and optional biometric key.
 
 Mutation: signUp
@@ -180,7 +180,7 @@ email: String (required)
 password: String (required)
 biometricKey: String (optional)
 
-User Login
+## User Login
 Authenticates a user using their email and password, returning a JWT token.
 
 Mutation: signin
@@ -190,7 +190,7 @@ Input Type: LoginUserInput
 email: String (required)
 password: String (required)
 
-Biometric Login
+## Biometric Login
 Authenticates a user using their email and biometric key, returning a JWT token.
 
 Mutation: biometricSignin
